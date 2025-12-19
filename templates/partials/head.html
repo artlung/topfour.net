@@ -1,0 +1,71 @@
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{ config.title }}</title>
+	<meta name="description" content="{{  config.description }}" />
+	<meta name="keywords" content="{{  config.extra.tags }}" />
+	<meta name="author" content="{{ config.author }}" />
+	<link rel="canonical" href="{{ config.base_url | safe }}" />
+	{%- if config.generate_feeds and config.feed_filenames %}
+		{% for feed in config.feed_filenames %}
+			{% if feed == "atom.xml" %}
+	<link rel="alternate" type="application/atom+xml" title="{{ config.title }} - Atom Feed" href="{{ get_url(path=feed) | safe }}">
+			{% elif feed == "rss.xml" %}
+	<link rel="alternate" type="application/rss+xml" title="{{ config.title }} - RSS Feed" href="{{ get_url(path=feed) | safe }}">
+			{% else %}
+	<link rel="alternate" href="{{ get_url(path=feed) | safe }}">
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+	<link rel="preload" href="{{ get_url(path='style.css') | safe }}" as="style">
+	{%- set styles = [ "style.css" ] %}
+	{%- for style in styles %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}" />
+	{%- endfor %}
+	<link rel="icon" href="https://topfour.net/favicon.png" type="image/png" sizes="any" />
+	<link rel="apple-touch-icon" sizes="180x180" href="https://topfour.net/apple-touch-icon.png">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="{{ config.title }}" />
+	<meta property="og:description" content="{{  config.description }}" />
+	<meta property="og:url" content="{{ config.base_url | safe }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:site_name" content="{{ config.title }}" />
+	<meta property="og:image" content="{{ config.extra.socialimage | safe }}" />
+	<meta property="article:tag" content="{{ config.extra.tags }}" />
+	<meta property="article:author" content="{{ config.author | safe }}" />
+	
+	<!-- Twitter -->
+	<meta name="twitter:title" content="{{ config.title }}" />
+	<meta name="twitter:description" content="{{  config.description }}" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@topfour_net" />
+	<meta name="twitter:image" content="{{ config.extra.socialimage | safe }}" />
+	
+	<!-- Mastodon -->
+	<meta name="fediverse:creator" content="@topfour@mastodon.social">
+	
+	<!-- Schema.org JSON-LD -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "WebPage",
+	  "headline": "{{ config.title }}",
+	  "description": "{{  config.description }}",
+	  "url": "{{ config.base_url | safe }},
+	  "inLanguage": "en-GB",
+	  "publisher": {
+		"@type": "Person",
+		"name": "{{ config.title | safe }}",
+		"url": "{{ config.base_url | safe }}",
+		"image": "https://topfour.net/image/topfour-logo-round.png",
+		"sameAs": [
+			"https://x.com/topfour_net",
+			"https://bsky.app/profile/topfour.net",
+			"https://mastodon.social/@topfour"
+		  ],
+		"image": "{{ config.extra.socialimage | safe }}"
+	}
+	</script>
+</head>

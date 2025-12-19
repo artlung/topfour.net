@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
+{% block pre_head %}{% endblock pre_head %}
+{% include "partials/head.html" %}
+<body>
+{% block body %}
+	<main id="main-content">
+		{% block custom %}{% endblock custom %}
+		
+		{% block content %}{% endblock content %}
+	</main>
+	{% include "partials/footer.html" %}
+{% endblock body %}
+</body>
+</html>
+ 

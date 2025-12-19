@@ -1,16 +1,16 @@
-# The URL the site will be built for
+# Variables
 base_url = "https://topfour.net"
+title = "Top Four"
+author = "Peter's Path"
+description = "The community directory for personal Top 4 lists. Share your ranked favorites: movies, albums, snacks, games and more. What is your Top 4?"
 
-# Whether to automatically compile all Sass files in the sass directory
+# Settings
 compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 
 [extra]
-# Put all your custom variables here
+tags = "top 4, top four, top 4 lists, personal rankings, favorite movies, best albums, top books, favorite snacks, best games, top video games, best productivity tools, favorite comfort foods"
+socialimage = "https://topfour.net/images/social-image.jpg"
