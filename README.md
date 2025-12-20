@@ -36,6 +36,8 @@ GitHub will then prompt you to create a Pull Request against the original reposi
 
 Submissions will be reviewed as quickly as possible, and when your Pull Request is merged, your website will appear in the directory above!
 
+*We reserve the right to refuse any site we deem to be inappropriate. Basically, if you wouldn't show it to your grandma or your kids, you're probably not going to get accepted.*
+
 ### 7. Link back
 
 It would be awesome if you link back to this website from your **/top4** page. This way your readers can discover Top 4's from other people.
