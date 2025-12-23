@@ -7,13 +7,12 @@ title = "Top Four"
 
 ## What is an /top4 page?
 
-A **/top4** page is a personal webpage where you can share your definitive ranked list of your top 3 favorites and an honorable mention. In a specific topic, such as movies, albums, snacks, games, or anything else you feel strongly about. 
+A **/top4** page is a personal webpage where you can share your definitive ranked list of your top 3 favorites and an honorable mention. In a specific topic, such as movies, albums, snacks, games, or anything else you feel strongly about. Read also the [announcement here](https://peterspath.net/blog/project-top-four/).
 
 Inspired by the fun, opinionated style of ranking things in fours, it allows you to express your tastes clearly and concisely while inviting discussion and debate. 
 
 You can add a **/top4** page to your personal website as a lightweight and engaging way to share more about yourself beyond the usual /about or /now pages.
 
-Read also the [announcement here](https://peterspath.net/blog/project-topfour/).
 
 ---
 
